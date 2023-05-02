@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" type="image/x-icon" href="images/TAB LOGO.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Sans+Display:wght@300&family=Oswald:wght@500&family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <title>ABOUT US</title>
+<head>
+<style>
+   
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif ,"Bold 700"; 
+}
+
+.column {
+  float: left;
+  width: 50%;
+ 
+  padding: 0px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+   /* max-height: 50%; 
+   height: 50%; */
+  content: "";
+  clear: both;
+  display: table;
+}
+.column2 {
+  float: left;
+  width: 33.3%;
+  
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media screen and (max-width: 500px) {
+  .column2 {
+    width: 100%;
+  }
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1300px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 2330px) {
+  .column {
+    /* width: 50%; */
+    font-size: 163%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .column {
+    /* width: 50%; */
+    font-size: 145;
+  }
+}
+/* box-sizing: border-box;
+} */
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column4 {
+  float: left;
+  width: 33.3%;
+  /* height: 816px; */
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column4 {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+  height: 816px;
+}
+
+.container::after, .row::after {
+    
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  color: rgb(255, 255, 255);
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(100, 100, 100, 0.685);
+  transition: 0.3s;
+  background-color: rgb(255, 254, 254);
+  /* width: 30%; */
+  height: 70%;
+}
+/* Navigation Menu - Background */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  
+  /* non-critical appearance styles */
+  list-style: none;
+  background: #111;
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 200px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #000;
+}
+
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+.nav-item a:hover {
+  color: #817b7b;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(136, 117, 117, 0.65) 100%);
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /* Critical position and size styles */
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white; /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  
+  /* non-critical apperance styles */
+  padding: 4em;
+  background-image: linear-gradient(135deg, rgb(254,255,255) 0%,rgb(202, 195, 195) 35%,rgb(206, 192, 192) 100%);
+  background-size: 200%;
+}
+
+/* Nav Trigger */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+body {
+  /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif ,"Bold 700"; 
+}
+
+/* Additional non-critical styles */
+
+h1, h3, p {
+  max-width: 600px;
+  margin: 0 auto 1em;
+}
+
+code {
+  padding: 2px;
+  background: #ddd;
+}
+
+/* Micro reset */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }
+
+.body2{
+  /* background: #eee; */
+
+
+  margin:0;
+  padding:0;
+  border:0;
+  font-size: 17px;
+  line-height: 1.4;
+  
+}
+
+
+h2, details{
+  display:inline;
+}
+
+details {
+  position:relative;
+  
+}
+@media screen and (max-width: 1000px) {
+  details{
+    width: 100%;
+  }
+}
+details summary {
+  display:block;
+  cursor: pointer;
+  color: rgb(19, 15, 15);
+
+}
+details summary:focus {
+  outline:none;
+}
+details[open] {
+  display:block;
+  padding-bottom:25px;
+  padding-top:10px;
+  animation: open .2s linear;
+  
+  
+}
+details[open] summary {
+  position:absolute;
+  bottom: 0;
+  /* left:0; */
+  
+}
+
+/* details #open{padding-left:5px;justify-content:center;} */
+details #open:after{
+    display: inline-block;
+    position:relative;
+    top: -3px;
+    padding-left: 8px;
+    content: "\00bb";
+    transform: rotate(90deg);
+
+}
+details[open] #open{display:none;}
+details #close{display:none;}
+details[open] #close{display:block;}
+
+::-webkit-details-marker {display: none;}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+}
+.button:hover {
+  background:rgb(211, 209, 209);
+  border-color:rgb(211, 209, 209);
+  color:#fff;
+}
+/* service box */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+body{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: #f2f2f2;
+}
+.wrapper{
+  display: grid;
+  margin:70px 70px auto;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  .wrapper{
+    margin: 100px auto;
+  }
+}
+
+.wrapper .box{
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+  justify-content: center;
+  float: left;
+}
+.wrapper .box .front-face{
+  background: #fff;
+  height: 290px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+  float: left;
+}
+.box .front-face .icon{
+  height: 80px;
+}
+.box .front-face .icon i{
+  font-size: 3px;
+}
+.box .front-face span
+{
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .front-face .icon i
+{
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column0 {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 10px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1150px) {
+  .column0 {
+    width: 100%;
+    display: block;
+  }
+}
+.row0::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* MEET */
+.wrapper2{
+  display: grid;
+  margin:70px 60px auto;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  .wrapper2{
+    margin: 100px auto;
+  }
+}
+.wrapper2 .box11{
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+  justify-content: center;
+  float: left;
+}
+.wrapper2 .box11 {
+  /* background: rgb(255, 255, 255); */
+  height: 455px;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  box-shadow: 0px 5px 20px 0px rgba(0, 81, 250, 0.1);
+  transition: all 0.5s ease;
+  float: left;
+  
+  
+}
+.box11 .front-face .icon{
+  height: 80px;
+}
+.box11 .front-face .icon i{
+  font-size: 3px;
+}
+.box11 .front-face span
+{
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  justify-content:center;
+}
+.box11 .front-face .icon p{
+  justify-content: center;
+}
+.box11 .front-face .icon i
+{
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 600px) {
+   table {width:100%;}
+   thead {display: none;}
+   tr:nth-of-type(2n) {background-color: inherit;}
+   tbody td {display: block;  text-align:center;}
+   tbody td:before { 
+       content: attr(data-th); 
+       display: block;
+       text-align:center;  
+   }
+}
+</style>
+</head>
+<body>
+  <ul class="navigation">
+    <li class="nav-item"><a href="index.html">Home</a></li>
+    <li class="nav-item"><a href="about.html">About</a></li>
+    <li class="nav-item"><a href="project.html">Project</a></li>
+    <li class="nav-item"><a href="services.html">Services</a></li>
+    <li class="nav-item"><a href="contact/mail.html">Contact</a></li>
+  </ul>
+  
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger"></label>
+ 
+  <div class="site-wrap">
+
+    <div class="container2">
+<h2 style="font-family: 'Noto Sans Display', sans-serif; font-weight: bold;font-size:50px ;">Get to Know Us</h2><br><br>
+<div class="row" >
+  <div class="column" >
+    <img src="images/the line office.jpg" alt="About" style="width:100%">
+  </div>
+  <div class="column" >
+    <p style="font-size: 130%;  width: 100%; text-align: justify;">The Line Design Studio is a New Delhi based design and construction studio founded in 2021 by Kashif Ali. We are a passionate team of skilled architects and interior designers. Our objective is to meet the requirements and expectations of our clients through an exquisite, innovative, and unique design approach. Our team strives to overcome the limitations between design and construction while following our basic principle, that is, to deliver high-quality services and unique architectural ideas. Unbox Studio has led several projects in the field of architecture, interior, and landscape design. We focus on not just paying attention to a project’s design but also on the environmental, social and economic aspects of a project. Our team adheres to the highest professional standards throughout every stage of a project’s completion so as to build a trustable relationship with our clients. </p>
+  </div>
+    </div>
+</div>
+<br><br>
+<div class="box8" style="text-align: center;">
+<h2 style="font-family: 'Noto Sans Display', sans-serif; font-weight: bold;font-size:40px ;">WE BUILD FOR BETTER FUTURE</h2>
+<div class="wrapper">
+  <div class="box">
+     <div class="front-face">
+        <div class="icon">
+           <img src="logo for 2.2.jpg" alt="" style="width: 100px;">
+           <h3>Conceptual Design</h3>
+           <p>
+              Our team prioritizes understanding the demands and expectations
+              of our client. We prepare the conceptual design. Under this, detailed
+             architectural designs, including details related to décor are shared for
+             the project.
+           </p>
+        </div>
+        </div>
+  </div>
+  <div class="box">
+     <div class="front-face">
+        <div class="icon">
+           <img src="logo for 2.2 - Copy.jpg" alt="" style="width: 100px;">
+           <h3>Visualization</h3>
+           <p>
+              We offer 3D visuals of our projects that enable our clients clearly
+     visualize how the project will look post-implementation. Various
+     detailed plans and images are also shared to strike the perfect
+     balance between our innovation and the desire of our client.
+           </p>
+        </div>
+     </div>
+  </div>
+  <div class="box">
+     <div class="front-face">
+        <div class="icon">
+           <img src="logo for 2.2 - Copy (2).jpg" alt="" style="width: 100px;">
+           <h3>Delivery of the Project</h3>
+           <p>
+              By obtaining final approval of our client that the requirements are
+     being met, we then move to the practical implementation of the
+     project. All other miscellaneous details/aspects are thoroughly
+     discussed during this stage.
+           </p>
+        </div>
+        </div>
+  </div>
+</div>
+  </div>
+  
+ <br><br>
+
+<!-- ....................................................................... -->
+  <div class="box3" style="text-align: center;  justify-content: center;">
+  
+  <!-- Page Start -->
+<div id="home" class="w3-content" style="max-width:1564px">
+
+  <!-- About -->
+  <div id="about" class="w3-container w3-padding-32" style="text-align: center;">
+    <h2 class="  w3-padding-16" style="font-family: 'Noto Sans Display', sans-serif; font-weight: bold;font-size:50px ;">MEET THE TEAM</h2>
+    <br>
+    <!-- -----------------11111111111111111111111--------- -->
+          <div class="wrapper2" style="justify-content: center;">
+          <div class="box11">
+      <div class="container" style="height: 500px;">
+        <div id='cover_image' class="cover_image" style="background-image: url(images/kashif\ web.jpg);">
+          <div class="cover_image_overlay">
+            <div class="cover_image_content">
+              <div class="flex">
+                <div class="left">
+                  <h1>KASHIF ALI</h1>
+                  <p>ARCHITECT</p>
+                </div>
+                <div class="right">
+                  <div id='arrow_button' class="icon_cover" role='button'>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='detail_content' class="detail_content hidden">
+          <div class="circular_image">
+            <img class="profile_image" src="images/kashif web.jpg" alt="Avatar">
+          </div>
+          <p class='job_description'>Kashif Ali holds a bachelor’s degree of architecture and master’s degree in Urban Regeneration from Jamia Millia Islamia, New Delhi. He has a strong interest in residential and commercial projects and largely focuses on design and detailing.</p>
+          <hr>
+          <div class="follow">
+            <button id='follow_button' class='button'>BACK</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    <!-- -------------222222222222222-------- -->
+          <div class="box11">
+      <div class="container" style="height: 500px;">
+        <div id='cover_image2' class="cover_image" style="background-image: url(images/farhan\ web.jpg);">
+          <div class="cover_image_overlay">
+            <div class="cover_image_content">
+              <div class="flex">
+                <div class="left">
+                  <h1>FARHAN ALI</h1>
+                  <p>CIVIL ENGINEER</p>
+                </div>
+                <div class="right">
+                  <div id='arrow_button2' class="icon_cover" role='button'>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='detail_content2' class="detail_content hidden">
+          <div class="circular_image" >
+            <img class="profile_image" src="images/farhan web.jpg" alt="Avatar">
+          </div>
+          <p class='job_description'>Farhan Ali is a graduate in Bachelor’s of Civil Engineering and has a postgraduate degree in MBA with specialization in Construction Management.He holds experience as Planning Manager with a demonstrated history of working in the real estate industry.</p>
+          <hr>
+          <div class="follow">
+            <button id='follow_button2' class='button'>BACK</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    <!-- -----------------------33333333333333333----------- -->
+        <div class="box11">
+      <div class="container" style="height: 500px;">
+        <div id='cover_image3' class="cover_image" style="background-image: url(images/tab\ web.jpg);">
+          <div class="cover_image_overlay">
+            <div class="cover_image_content">
+              <div class="flex">
+                <div class="left">
+                  <h1>TABISH SUHAIL</h1>
+                  <p>ARCHITECT</p>
+                </div>
+                <div class="right">
+                  <div id='arrow_button3' class="icon_cover" role='button'>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='detail_content3' class="detail_content hidden">
+          <div class="circular_image">
+            <img class="profile_image" src="images/tab web.jpg" alt="Avatar">
+          </div>
+          <p class='job_description'>He holds Architecture degree and a master’s in Building Services.The hands on experience has taught him optimizing, implementing, practical and measurable sustainable design knowledge. He have a proven track record of delivering results with my problem solving skills and attention to details.  
+          </p>
+          <hr>
+          <div class="follow">
+            <button id='follow_button3' class='button'>BACK</button>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+    <!-- Page End -->
+    </div>
+</div>
+</div>
+</div>
+
+<br><br>
+<!-- ....................... -->
+<div class="table-responsive" >
+  <table style="width: 100%; height: 750px; background-color: rgb(13, 14, 14);">
+    <tr>
+      <th COLSPAN="4" style=" text-align: center;"><br><h1 ><b><I>THE PROCESS</I></b></h1>
+       
+      </th>
+      </tr>
+      <tr>
+        <th COLSPAN="4" style=" text-align: justify; justify-content: left; font-size: 20px; width: 100%;">
+          <p>We follow our standardised design process to achieve the quality you desire in stipulated
+            time. This not only help us in organising the details as per your requirements but also
+            maintain design culture in our studio. Our four key steps are: </p>
+        </th>
+        </tr>
+    <tr style="height: 33.3%; font-size: 18px;">
+      
+      <td style="font-size:100px">1.</td>
+      <td><span style="font-size: 30px; font-weight: bold;"> d i s c o v e r i n g </span><br> Client meeting to understand the requirements, site layout study and site verification</td>
+      <td style="font-size:100px">2.</td>
+      <td><span style="font-size: 30px; font-weight: bold;">d e s i g n i n g</span><br> Mood Board, material selection
+        2D AutoCad layout creation, 3D view presentation</td>
+    </tr>
+    <tr style="height: 33.3%; font-size: 18px;">
+      <td style="font-size:100px">3.</td>
+      <td><span style="font-size: 30px; font-weight: bold;">d e v e l o p i n g</span> <br> Delivery of working drawings
+        Styling details and Onsite execution</td>
+      <td style="font-size:100px">4.</td>
+      <td><span style="font-size: 30px; font-weight:bold ;">d e l i v e r i n g</span><br>Site handover after client verification and satisfaction</td>
+    </tr>
+    </table>
+    </div>
+    </div>
+    <script src="about.babel"></script>
+</body>
+</html>
+

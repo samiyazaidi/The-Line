@@ -1,0 +1,61 @@
+console.log("Hello World");
+var rightArrow = document.getElementById("arrow_button");
+var topCard = document.getElementById("cover_image");
+var bottomCard = document.getElementById("detail_content");
+var followButton = document.getElementById("follow_button");
+
+rightArrow.addEventListener("click", function () {
+  topCard.classList.add("hidden");
+  bottomCard.classList.remove("hidden");
+  console.log("Hide top card and show bottom card.");
+});
+followButton.addEventListener("click", function () {
+  topCard.classList.remove("hidden");
+  bottomCard.classList.add("hidden");
+  console.log("Hide bottom card and show top card.");
+});
+// 2
+var rightArrow2 = document.getElementById("arrow_button2");
+var topCard2 = document.getElementById("cover_image2");
+var bottomCard2 = document.getElementById("detail_content2");
+var followButton2 = document.getElementById("follow_button2");
+rightArrow2.addEventListener("click", function () {
+    topCard2.classList.add("hidden");
+    bottomCard2.classList.remove("hidden");
+    console.log("Hide top card and show bottom card.");
+  });
+  followButton2.addEventListener("click", function () {
+    topCard2.classList.remove("hidden");
+    bottomCard2.classList.add("hidden");
+    console.log("Hide bottom card and show top card.");
+  });
+//   3
+var rightArrow3 = document.getElementById("arrow_button3");
+var topCard3 = document.getElementById("cover_image3");
+var bottomCard3 = document.getElementById("detail_content3");
+var followButton3 = document.getElementById("follow_button3");
+rightArrow3.addEventListener("click", function () {
+    topCard3.classList.add("hidden");
+    bottomCard3.classList.remove("hidden");
+    console.log("Hide top card and show bottom card.");
+  });
+  followButton3.addEventListener("click", function () {
+    topCard3.classList.remove("hidden");
+    bottomCard3.classList.add("hidden");
+    console.log("Hide bottom card and show top card.");
+  });
+//   4
+var rightArrow4 = document.getElementById("arrow_button4");
+var topCard4 = document.getElementById("cover_image4");
+var bottomCard4 = document.getElementById("detail_content4");
+var followButton4 = document.getElementById("follow_button4");
+rightArrow4.addEventListener("click", function () {
+    topCard4.classList.add("hidden");
+    bottomCard4.classList.remove("hidden");
+    console.log("Hide top card and show bottom card.");
+  });
+  followButton4.addEventListener("click", function () {
+    topCard4.classList.remove("hidden");
+    bottomCard4.classList.add("hidden");
+    console.log("Hide bottom card and show top card.");
+  });

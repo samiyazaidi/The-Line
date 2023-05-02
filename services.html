@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SERVICES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/x-icon" href="images/TAB LOGO.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400&family=Noto+Sans+Display:wght@300&family=Oswald:wght@500&family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-color: rgb(250, 242, 242);
+}
+
+h1{
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif, "Bold 700";
+  /* font-weight: bold ; */
+  color: rgb(15, 1, 1);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+          
+}
+
+.col{
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+  
+}
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
+          justify-content: center;
+}
+
+
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+/* Navigation Menu - Background */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  
+  /* non-critical appearance styles */
+  list-style: none;
+  background: #111;
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 200px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #000;
+}
+
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+.nav-item a:hover {
+  color: #817b7b;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(136, 117, 117, 0.65) 100%);
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /* Critical position and size styles */
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white; /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  
+  /* non-critical apperance styles */
+  padding: 4em;
+  background-image: linear-gradient(135deg, rgb(254,255,255) 0%,rgb(116, 113, 113) 35%,rgb(95, 83, 83) 100%);
+  background-size: 200%;
+}
+
+/* Nav Trigger */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+body {
+  /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+}
+
+/* Additional non-critical styles */
+
+h1, h3, p {
+  max-width: 600px;
+  margin: 0 auto 1em;
+}
+p{
+  font-family: 'Montserrat', sans-serif ,"Bold 700"; 
+}
+code {
+  padding: 2px;
+  background: #ddd;
+}
+
+/* Micro reset */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+figure.snip1256 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 320px;
+  max-width: 310px;
+  max-height: 300px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  background-color: #07090c;
+  font-size: 16px;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+}
+figure.snip1256 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+figure.snip1256 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+figure.snip1256 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% -50%;
+  -ms-transform-origin: 50% -50%;
+  transform-origin: 50% -50%;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 20px;
+}
+figure.snip1256 h3,
+figure.snip1256 p {
+  line-height: 1.5em;
+}
+figure.snip1256 h3 {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+figure.snip1256 p {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+figure.snip1256 .read-more {
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+}
+figure.snip1256 .read-more:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+figure.snip1256:hover img,
+figure.snip1256.hover img {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+figure.snip1256:hover figcaption,
+figure.snip1256.hover figcaption {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(253, 253, 253); /* Fallback color */
+  background: rgba(0, 0, 0, .1); /* Black background with 0.5 opacity */
+  color: #f5f5f5;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  justify-content: center;
+  padding-left: 22%;
+
+}
+
+  </style>
+</head>
+<body>
+  <ul class="navigation">
+    <li class="nav-item"><a href="index.html">Home</a></li>
+    <li class="nav-item"><a href="about.html">About</a></li>
+    <li class="nav-item"><a href="project.html">Project</a></li>
+    <li class="nav-item"><a href="services.html">Services</a></li>
+    <li class="nav-item"><a href="contact/mail.html">Contact</a></li>
+  </ul>
+  
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger"></label>
+
+  <div class="site-wrap">
+    
+  <div class="wrapper">
+    <h1>S E R V I C E S</h1>
+    <!-- 1 -->
+    <div class="cols">
+          <div class="container">
+            <figure class="snip1256">
+              <img src="images/urban (1).jpg">
+              <div class="content">
+                <p style="color: ivory; font-size: larger; ">URBAN PLANNING</p>
+              </div>
+              <figcaption>
+                <p>It includes assessment and preparation of design guidelines for various land uses. Our designs can operates at various scales, from the macro scale to the micro scale. Furthermore, we also avail three dimensional massing studies and shadow analysis, as well as the development of concept plans. 
+              </figcaption>
+            </figure>
+          </div>
+        <!-- 2 -->
+          <div class="container">
+            <figure class="snip1256">
+              <img src="images/architecture.jpg">
+              <div class="content">
+                <p style="color: ivory; font-size: larger; ">ARCHITECTURE</p>
+              </div>
+              <figcaption>
+                <p>Architectural Services includes from the concept visualization to submission drawings till construction. We questioneverything during the process and are always looking for better materials,methods, and options. We manage the entire process, progress, interaction with local authorities and keep our clients fully informed all the way in design and
+                  development work.</p>
+              </figcaption>
+            </figure>
+          </div>
+        <!-- 3 -->
+          <div class="container">
+            <figure class="snip1256">
+              <img src="images/interior.jpg" alt="sample42"/>
+              <div class="content">
+                <p style="color: ivory; font-size: larger; ">INTERIOR DESIGN</p>
+              </div>
+              <figcaption>
+                <p>Interior design completes the project and goes a long way in defining the image or identifying the structure. We collaborates with the client in defining the image and how to achieve it in the selection of colors,materials, textures, and Finishes.</p>
+              </figcaption>
+            </figure>
+          </div>
+        <!-- 4 -->
+          <div class="container">
+            <figure class="snip1256">
+              <img src="images/product.jpg" alt="sample42"/>
+              <div class="content">
+                <p style="color: ivory; font-size: larger; ">PRODUCT DESIGN</p>
+              </div>
+              <figcaption>
+                <p>We believe in products made with the best quality materials and one-of-a-kind design that brings a unique sensibility to spaces and lifestyle. We believe every space has a different story and demands something unique. We develop and make new products that can be customized according to your space,specific needs & your lifestyle.</p>
+              </figcaption>
+            </figure>
+          </div>
+        <!-- 5 -->
+          <div class="container">
+            <figure class="snip1256">
+              
+              <img src="images/graphic.jpg" alt="sample42"/>
+              <div class="content">
+                <p style="color: ivory; font-size: larger; ">GRAPHIC DESIGN</p>
+              </div>
+              <figcaption>
+                <p>It is clearly about creating merchandising presentations thatare exciting, captivating and engaging tothe consumer. We work closely with Clients to analyze the effectiveness of their visual merchandising techniques:
+                  from store planning to visual sight lines in and best utilization of provided space in order to create a perfect point of sale. Our team is specialized in designing cafes, restaurants, retail, and automobile stores.</p>
+              </figcaption>
+            </figure>
+          </div>
+      </div>
+   </div>
+   </div>
+</body>
+</html>
